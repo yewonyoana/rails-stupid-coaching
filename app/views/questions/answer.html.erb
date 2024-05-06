@@ -1,0 +1,18 @@
+<%# display the question you ask your coach as well as his answer %>
+<div class="container d-flex flex-column mt-3">
+  <h1 class="ml-3">Stupid Coaching</h1>
+    <p>
+      <%= params[:question].capitalize %>
+    </p>
+    <% if params[:question] == "I am going to work" %>
+    <p>
+      <%= @great %>
+    </p>
+    <% elsif params[:question].include?("?") %>
+      <%= @silly %>
+    <% else %>
+    <p>
+      <%=  @else %>
+    </p>
+    <% end %>
+</div>
